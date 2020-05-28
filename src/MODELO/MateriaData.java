@@ -1,5 +1,6 @@
 package MODELO;
 
+import CONTROLADOR.Conexion;
 import controlador.Materia;
 
 import java.sql.Connection;
@@ -17,7 +18,11 @@ public class MateriaData {
     private Connection connection = null;
 
     public MateriaData(Conexion conexion) {
-        connection = conexion.getConection();
+        try {
+            connection = conexion.getConexion();
+        } catch (SQLException ex) {
+            Logger.getLogger(MateriaData.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public void guardarMateria(Materia materia) {

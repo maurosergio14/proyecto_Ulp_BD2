@@ -6,6 +6,7 @@
 package MODELO;
 import CONTROLADOR.Alumno;
 import CONTROLADOR.Alumno;
+import CONTROLADOR.Conexion;
 import CONTROLADOR.Cursada;
 import CONTROLADOR.Cursada;
 import controlador.Materia;
@@ -64,7 +65,7 @@ public class CursadaData {
             
 
         try {
-            String sql = "SELECT * FROM cursada;";
+            String sql = "SELECT * FROM cursada;";//WHERE idalumno=???
             PreparedStatement statement = connection.prepareStatement(sql);
             ResultSet resultSet = statement.executeQuery();
             Cursada cursada;

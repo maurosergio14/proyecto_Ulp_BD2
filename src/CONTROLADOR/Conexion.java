@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package MODELO;
+package CONTROLADOR;
 
 
 import java.sql.Connection;
@@ -40,10 +40,6 @@ public class Conexion {
                     + "&user=" + usuario + "&password?=" + password);
         }
         return conexion;
-    }
-
-    public Connection getConection() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+     }
 
 }
